@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Child Safety &amp; Babyproofing &#8212; New England Healthy Homes</title>
+</head>
+<body>
+<style>
+  :root {
+    --navy: #1e3a5f;
+    --navy-deep: #16293f;
+    --navy-hero: #1a3354;
+    --orange: #e8722a;
+    --orange-deep: #c95d1c;
+    --pine: #2e6b3e;
+    --paper: #f7f6f1;
+    --card: #ffffff;
+    --ink: #24303d;
+    --ink-soft: #5c6b7a;
+    --line: #e4e1d8;
+    --band: #edefe7;
+    --hero-ink: #f4f7fb;
+    --hero-sub: #c2d0e0;
+    --star: #e8a02a;
+    --shadow: 0 1px 3px rgba(30,58,95,.08), 0 8px 24px rgba(30,58,95,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy: #9db9d8;
+      --navy-deep: #0f1a28;
+      --navy-hero: #13223a;
+      --orange: #ef8340;
+      --orange-deep: #f09355;
+      --pine: #6fae7f;
+      --paper: #131a22;
+      --card: #1b242f;
+      --ink: #e3e8ee;
+      --ink-soft: #97a6b6;
+      --line: #2a3644;
+      --band: #171f29;
+      --hero-ink: #eef3f9;
+      --hero-sub: #b7c6d8;
+      --shadow: 0 1px 3px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --navy: #9db9d8;
+    --navy-deep: #0f1a28;
+    --navy-hero: #13223a;
+    --orange: #ef8340;
+    --orange-deep: #f09355;
+    --pine: #6fae7f;
+    --paper: #131a22;
+    --card: #1b242f;
+    --ink: #e3e8ee;
+    --ink-soft: #97a6b6;
+    --line: #2a3644;
+    --band: #171f29;
+    --hero-ink: #eef3f9;
+    --hero-sub: #b7c6d8;
+    --shadow: 0 1px 3px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  }
+  :root[data-theme="light"] {
+    --navy: #1e3a5f;
+    --navy-deep: #16293f;
+    --navy-hero: #1a3354;
+    --orange: #e8722a;
+    --orange-deep: #c95d1c;
+    --pine: #2e6b3e;
+    --paper: #f7f6f1;
+    --card: #ffffff;
+    --ink: #24303d;
+    --ink-soft: #5c6b7a;
+    --line: #e4e1d8;
+    --band: #edefe7;
+    --hero-ink: #f4f7fb;
+    --hero-sub: #c2d0e0;
+    --shadow: 0 1px 3px rgba(30,58,95,.08), 0 8px 24px rgba(30,58,95,.07);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16.5px;
+  }
+  h1,h2,h3,h4 { line-height: 1.15; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  a { color: inherit; }
+  img { max-width: 100%; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 72px 0; }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 14px;
+  }
+  .sec-title { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 700; color: var(--navy); }
+  .sec-sub { color: var(--ink-soft); max-width: 60ch; margin-top: 12px; }
+
+  .btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+  .btn-orange { background: var(--orange); color: #fff; }
+  .btn-orange:hover { background: var(--orange-deep); }
+  .btn-ghost { border-color: var(--hero-sub); color: var(--hero-ink); }
+  .btn-navy { background: var(--navy-deep); color: #fff; }
+
+  /* ---------- announcement + header ---------- */
+  .announce {
+    background: var(--navy-deep);
+    color: var(--hero-sub);
+    font-size: .84rem;
+    text-align: center;
+    padding: 8px 16px;
+    letter-spacing: .02em;
+  }
+  .announce strong { color: var(--hero-ink); font-weight: 600; }
+  header.site {
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .nav-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; padding: 14px 0;
+  }
+  .logo { display: flex; align-items: center; text-decoration: none; }
+  .logo img { height: 74px; width: auto; display: block; background: #fff; padding: 4px 12px; border-radius: 6px; }
+  nav.main { display: flex; gap: 26px; align-items: center; }
+  nav.main a { text-decoration: none; font-size: .93rem; font-weight: 600; color: var(--ink); }
+  nav.main a:hover { color: var(--orange); }
+  .drop { position: relative; }
+  .drop > a::after { content: " ▾"; font-size: .75em; }
+  .drop-menu {
+    position: absolute; top: 100%; left: -16px; padding: 8px 0; min-width: 220px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+    box-shadow: var(--shadow); display: none; flex-direction: column; z-index: 60;
+  }
+  .drop:hover .drop-menu, .drop:focus-within .drop-menu { display: flex; }
+  .drop-menu a { padding: 9px 18px; }
+  .drop-menu a:hover { background: var(--band); }
+  .nav-cta { display: flex; align-items: center; gap: 16px; }
+  .nav-phone { font-weight: 700; color: var(--navy); text-decoration: none; font-size: .93rem; white-space: nowrap; }
+  @media (max-width: 860px) { nav.main { display: none; } }
+
+  /* ---------- hero ---------- */
+  .hero {
+    background: var(--navy-hero);
+    color: var(--hero-ink);
+    position: relative;
+    overflow: hidden;
+    padding: 92px 0 110px;
+  }
+  .hero .wrap { position: relative; z-index: 2; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -.015em;
+  }
+  .hero h1 .accent { color: var(--orange-soft, #f4a05c); color: #f4a05c; }
+  .hero .lede { margin-top: 20px; font-size: 1.12rem; color: var(--hero-sub); max-width: 52ch; }
+  .hero-ctas { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-checks { margin-top: 36px; display: flex; gap: 22px; flex-wrap: wrap; font-size: .88rem; color: var(--hero-sub); }
+  .hero-checks span::before { content: "✓"; color: #7fc48f; font-weight: 700; margin-right: 7px; }
+  .hero-ridge { position: absolute; bottom: -2px; left: 0; right: 0; z-index: 1; }
+  .hero-ridge svg { display: block; width: 100%; height: 90px; }
+
+  /* hero visit card */
+  .visit-card {
+    background: var(--card);
+    color: var(--ink);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 26px 26px 22px;
+  }
+  .visit-card h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 4px; }
+  .visit-card .vc-sub { font-size: .86rem; color: var(--ink-soft); margin-bottom: 16px; }
+  .vc-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: .92rem; }
+  .vc-row:last-of-type { border-bottom: 0; }
+  .vc-row .price { font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; }
+  .vc-more {
+    font-size: .76rem; font-weight: 700; color: var(--orange);
+    text-decoration: none; margin-left: 8px; white-space: nowrap;
+  }
+  .vc-more:hover { text-decoration: underline; }
+  .vc-all { margin-top: 12px; font-size: .88rem; }
+  .vc-all a { color: var(--navy); font-weight: 700; text-decoration: none; }
+  .vc-all a:hover { color: var(--orange); }
+  .vc-note { font-size: .78rem; color: var(--ink-soft); margin-top: 10px; }
+  .ph-note { font-size: .74rem; color: var(--ink-soft); font-style: italic; }
+
+  /* ---------- trust band ---------- */
+  .trust { background: var(--card); border-bottom: 1px solid var(--line); padding: 26px 0; }
+  .trust-row { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 10px; font-size: .9rem; font-weight: 600; color: var(--ink); }
+  .trust-item svg { color: var(--pine); flex-shrink: 0; }
+
+  /* ---------- category cards ---------- */
+  .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
+  @media (max-width: 1000px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .cat-grid { grid-template-columns: 1fr; } }
+  .cat {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 28px 26px 24px; display: flex; flex-direction: column; gap: 10px;
+    transition: box-shadow .15s ease, border-color .15s ease;
+  }
+  .cat:hover { box-shadow: var(--shadow); border-color: transparent; }
+  .cat svg { color: var(--pine); }
+  .cat h3 { color: var(--navy); font-size: 1.18rem; }
+  .cat > p { font-size: .9rem; color: var(--ink-soft); }
+  .cat ul { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: .87rem; color: var(--ink-soft); }
+  .cat li::before { content: "•"; color: var(--orange); font-weight: 700; margin-right: 9px; }
+  .cat .cat-link { margin-top: auto; padding-top: 14px; font-size: .88rem; font-weight: 700; color: var(--orange); text-decoration: none; }
+  .cat .cat-link:hover { text-decoration: underline; }
+
+  /* ---------- services ---------- */
+  .svc-group { margin-top: 44px; }
+  .svc-group h3 {
+    font-size: .82rem; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 700;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .svc-group h3 .ln { height: 1px; background: var(--line); flex: 1; }
+  .grp-link {
+    font-size: .78rem; font-weight: 700; letter-spacing: .02em; text-transform: none;
+    color: var(--orange); text-decoration: none; white-space: nowrap;
+  }
+  .grp-link:hover { text-decoration: underline; }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+  @media (max-width: 860px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .svc-grid { grid-template-columns: 1fr; } }
+  .svc {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 18px 16px;
+    display: flex; flex-direction: column; gap: 6px;
+    transition: box-shadow .15s ease, border-color .15s ease;
+  }
+  .svc:hover { box-shadow: var(--shadow); border-color: transparent; }
+  .svc .top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .svc h4 { font-size: .98rem; font-weight: 700; color: var(--navy); }
+  .svc .price {
+    font-weight: 800; color: var(--orange); font-size: .95rem;
+    white-space: nowrap; font-variant-numeric: tabular-nums;
+  }
+  .svc p { font-size: .85rem; color: var(--ink-soft); line-height: 1.5; }
+  .svc-more { font-size: .8rem; font-weight: 700; color: var(--orange); text-decoration: none; margin-top: 2px; }
+  .svc-more:hover { text-decoration: underline; }
+  .svc-foot { margin-top: 30px; font-size: .85rem; color: var(--ink-soft); }
+
+  /* ---------- education ---------- */
+  .edu { background: var(--band); }
+  .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
+  @media (max-width: 700px) { .edu-grid { grid-template-columns: 1fr; } }
+  .edu-card {
+    background: var(--card);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 28px 26px 24px;
+    display: flex; flex-direction: column;
+  }
+  .edu-card .stat-num {
+    font-size: 2.6rem; font-weight: 800; color: var(--navy);
+    letter-spacing: -.02em; line-height: 1;
+  }
+  .edu-card .stat-unit { font-size: 1rem; font-weight: 700; color: var(--orange); }
+  .edu-card h4 { margin-top: 14px; font-size: 1.02rem; color: var(--ink); }
+  .edu-card p { margin-top: 8px; font-size: .88rem; color: var(--ink-soft); flex: 1; }
+  .edu-card .edu-link {
+    margin-top: 16px; font-size: .86rem; font-weight: 700; color: var(--orange);
+    text-decoration: none;
+  }
+  .edu-card .edu-link:hover { text-decoration: underline; }
+  .edu-src { font-size: .74rem; color: var(--ink-soft); margin-top: 10px; }
+  .edu-src a { color: inherit; text-decoration: underline; }
+  .edu-src a:hover { color: var(--orange); }
+
+  /* ---------- videos ---------- */
+  .vids-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+  @media (max-width: 860px) { .vids-grid { grid-template-columns: repeat(2, 1fr); } }
+  .vid {
+    aspect-ratio: 9 / 16;
+    border-radius: 10px;
+    background: linear-gradient(160deg, var(--navy-hero), var(--navy-deep));
+    color: var(--hero-sub);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .vid .play {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%);
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(232,114,42,.92);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .vid .play::after {
+    content: ""; margin-left: 4px;
+    border-left: 14px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+  }
+  .vid .vt { font-size: .84rem; font-weight: 600; color: var(--hero-ink); line-height: 1.35; position: relative; }
+  .vid .vd { font-size: .72rem; margin-top: 4px; position: relative; }
+
+  /* ---------- video carousel ---------- */
+  .carousel { display: flex; align-items: center; gap: 12px; margin-top: 40px; }
+  .car-track {
+    display: flex; gap: 16px; overflow-x: auto; flex: 1;
+    scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 4px;
+  }
+  .car-track .vid { flex: 0 0 218px; scroll-snap-align: start; aspect-ratio: 9 / 16; }
+  .car-btn {
+    width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+    background: var(--card); color: var(--navy); border: 1px solid var(--line);
+    font-size: 1.4rem; line-height: 1; cursor: pointer; box-shadow: var(--shadow);
+  }
+  .car-btn:hover { color: var(--orange); }
+  .car-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .car-track { scroll-behavior: auto; } }
+
+  /* ---------- subpage intro ---------- */
+  .page-intro { padding: 56px 0 8px; }
+  .lede-block { max-width: 68ch; display: flex; flex-direction: column; gap: 14px; color: var(--ink-soft); font-size: 1.02rem; }
+  .intro-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; margin-top: 18px; }
+  @media (max-width: 860px) { .intro-grid { grid-template-columns: 1fr; } }
+  .img-ph {
+    aspect-ratio: 4 / 3; border: 2px dashed var(--line); border-radius: 10px;
+    background: var(--card); color: var(--ink-soft); font-size: .9rem; text-align: center;
+    display: flex; align-items: center; justify-content: center; padding: 20px;
+  }
+
+  /* ---------- reviews ---------- */
+  .reviews { background: var(--band); }
+  .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+  @media (max-width: 860px) { .rev-grid { grid-template-columns: 1fr; } }
+  .rev {
+    background: var(--card); border-radius: 10px; box-shadow: var(--shadow);
+    padding: 26px 24px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .stars { color: var(--star); letter-spacing: 3px; font-size: 1rem; }
+  .rev q { font-size: .95rem; line-height: 1.6; quotes: "\201C" "\201D"; }
+  .rev .who { font-size: .84rem; font-weight: 700; color: var(--navy); margin-top: auto; }
+  .rev .who span { display: block; font-weight: 400; color: var(--ink-soft); }
+  .placeholder-tag {
+    display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--ink-soft);
+    border: 1px dashed var(--line); border-radius: 4px; padding: 2px 8px;
+  }
+
+  /* ---------- service area ---------- */
+  .towns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+  .town {
+    background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+    padding: 8px 18px; font-size: .9rem; font-weight: 600; color: var(--navy);
+  }
+  .town.more { border-style: dashed; color: var(--ink-soft); font-weight: 400; }
+
+  /* ---------- request a service form ---------- */
+  .req { background: var(--band); }
+  .req-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; margin-top: 12px; }
+  @media (max-width: 860px) { .req-grid { grid-template-columns: 1fr; } }
+  .req-list { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: .92rem; color: var(--ink-soft); }
+  .req-list li::before { content: "✓"; color: var(--pine); font-weight: 700; margin-right: 9px; }
+  .req-contact { margin-top: 26px; font-size: .95rem; }
+  .req-contact a { color: var(--navy); font-weight: 700; text-decoration: none; }
+  .req-contact a:hover { color: var(--orange); }
+  .req-form {
+    background: var(--card); border-radius: 10px; box-shadow: var(--shadow);
+    padding: 28px; display: grid; gap: 15px;
+  }
+  .req-form label { font-size: .8rem; font-weight: 700; color: var(--navy); display: grid; gap: 6px; }
+  .req-form input, .req-form select, .req-form textarea {
+    padding: 11px 12px; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--paper); color: var(--ink); font: inherit; font-size: .92rem; width: 100%;
+  }
+  .req-form textarea { resize: vertical; min-height: 96px; }
+  .req-form input:focus-visible, .req-form select:focus-visible, .req-form textarea:focus-visible {
+    outline: 2px solid var(--orange); outline-offset: 1px;
+  }
+  .req-two { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+  @media (max-width: 560px) { .req-two { grid-template-columns: 1fr; } }
+
+  /* ---------- newsletter ---------- */
+  .news {
+    background: var(--navy-hero); color: var(--hero-ink);
+    border-radius: 14px; padding: 52px 48px;
+    display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center;
+  }
+  @media (max-width: 860px) { .news { grid-template-columns: 1fr; padding: 36px 28px; } }
+  .news h2 { font-size: 1.7rem; font-weight: 800; }
+  .news p { margin-top: 12px; color: var(--hero-sub); font-size: .97rem; }
+  .news-form { display: flex; gap: 10px; }
+  .news-form input {
+    flex: 1; min-width: 0; padding: 13px 16px; border-radius: 6px;
+    border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08);
+    color: var(--hero-ink); font-size: .95rem;
+  }
+  .news-form input::placeholder { color: var(--hero-sub); }
+  .news-note { font-size: .78rem; color: var(--hero-sub); margin-top: 10px; }
+
+  /* ---------- footer ---------- */
+  footer.site {
+    background: var(--navy-deep); color: var(--hero-sub);
+    padding: 56px 0 32px; margin-top: 80px; font-size: .9rem;
+  }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  @media (max-width: 700px) { .foot-grid { grid-template-columns: 1fr; } }
+  footer .fh { color: var(--hero-ink); font-weight: 700; font-size: .95rem; margin-bottom: 12px; }
+  footer a { color: var(--hero-sub); text-decoration: none; }
+  footer a:hover { color: var(--hero-ink); }
+  footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .foot-base { border-top: 1px solid rgba(255,255,255,.12); margin-top: 44px; padding-top: 22px; font-size: .8rem; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* ---------- squarespace notes toggle ---------- */
+  .sqsp {
+    display: none;
+    margin: 0 auto 0;
+    max-width: 1080px;
+    padding: 0 24px;
+  }
+  .sqsp span {
+    display: inline-block;
+    background: #fff6e8; color: #8a5a1e; border: 1px solid #eccf9e;
+    font-size: .76rem; padding: 4px 12px; border-radius: 4px;
+    font-family: Consolas, monospace;
+  }
+  :root[data-theme="dark"] .sqsp span { background: #2a2417; color: #e5c286; border-color: #574722; }
+  @media (prefers-color-scheme: dark) { .sqsp span { background: #2a2417; color: #e5c286; border-color: #574722; } }
+  body.show-sqsp .sqsp { display: block; padding-top: 14px; }
+  .sqsp-toggle {
+    position: fixed; bottom: 18px; right: 18px; z-index: 90;
+    background: var(--card); color: var(--ink); border: 1px solid var(--line);
+    border-radius: 999px; padding: 10px 18px; font-size: .82rem; font-weight: 600;
+    box-shadow: var(--shadow); cursor: pointer;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+<div class="announce">
+  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(516) 510-2563</strong>
+</div>
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html" aria-label="New England Healthy Homes home">
+      <img src="nehh-logo.png" alt="New England Healthy Homes &#8212; Cleaner. Safer. Healthier Homes.">
+    </a>
+    <nav class="main" aria-label="Primary">
+      <div class="drop">
+        <a href="index.html#categories">Services</a>
+        <div class="drop-menu">
+          <a href="nehh-maintenance.html">Home Maintenance</a>
+          <a href="nehh-aging.html">Aging in Place</a>
+          <a href="nehh-childsafety.html">Child Safety</a>
+          <a href="nehh-homewatch.html">Seasonal Home Watch</a>
+        </div>
+      </div>
+      <a href="index.html#why">Why It Matters</a>
+      <a href="nehh-why.html">Who We Are</a>
+      <a href="index.html#reviews">Reviews</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:5165102563">(516) 510-2563</a>
+      <a class="btn btn-orange" href="index.html#book">Request a Service</a>
+    </div>
+  </div>
+</header>
+
+<section style="padding: 28px 0 0;">
+  <div class="wrap"><a href="index.html" style="font-size:.88rem; font-weight:700; color:var(--orange); text-decoration:none;">&#8592; Back to home</a></div>
+</section>
+<section class="page-intro">
+  <div class="wrap">
+    <span class="eyebrow">Child Safety</span>
+    <h1 class="sec-title">Your home, ready for little explorers.</h1>
+    <div class="intro-grid">
+    <div class="lede-block">
+      <p>Homes are designed for adults. Then a baby starts crawling, and suddenly every outlet, cabinet, staircase, and bookshelf looks different. Babyproofing well is partly about the right hardware — and mostly about knowing where the real risks hide.</p>
+      <p>The most serious hazards are the quiet ones: unanchored dressers and TVs that can tip, stairs without a properly mounted gate, cabinets with cleaning products at toddler height, cords within reach of a crib. Nearly all of it is preventable with an hour or two of well-installed hardware.</p>
+      <p>We babyproof the way we do everything: room by room, anchored into solid structure, with a background-checked local technician — so you can worry a little less and enjoy this stage a little more.</p>
+    </div>
+    <div class="img-ph">Photo: gate installation or anchored dresser<br>(to come from Dan)</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Services &amp; Pricing</span>
+    <h2 class="sec-title">Child safety services <span class="placeholder-tag">placeholder services &amp; pricing — for Dan's review</span></h2>
+    <p class="sec-sub">Flat-rate labor, published up front. Materials purchased by you independently, or through NEHH.</p>
+    <div class="svc-group">
+      <div class="svc-grid">
+        <div class="svc"><div class="top"><h4>Furniture &amp; TV Anchoring</h4><span class="price">$19<small>/item</small></span></div><p>Dressers, bookcases, and TVs strapped to studs — the #1 preventable tip-over risk.</p></div>
+        <div class="svc"><div class="top"><h4>Baby Gate Installation</h4><span class="price">$49<small>/gate</small></span></div><p>Hardware-mounted at stairs (not pressure gates), installed into solid framing.</p></div>
+        <div class="svc"><div class="top"><h4>Cabinet &amp; Drawer Locks</h4><span class="price">$29 + $5<small>/lock</small></span></div><p>Kitchen and bath cabinets secured — especially anywhere chemicals or medicines live.</p></div>
+        <div class="svc"><div class="top"><h4>Outlet Protection (Whole Home)</h4><span class="price">$39</span></div><p>Every reachable outlet covered or upgraded to tamper-resistant plates.</p></div>
+        <div class="svc"><div class="top"><h4>Corner &amp; Edge Guards</h4><span class="price">$29<small>/room</small></span></div><p>Coffee tables, hearths, and counters padded where new walkers wobble.</p></div>
+        <div class="svc"><div class="top"><h4>Window &amp; Cord Safety</h4><span class="price">$10<small>/window</small></span></div><p>Window stops and blind-cord fixes — two hazards parents most often miss.</p></div>
+        <div class="svc"><div class="top"><h4>Door &amp; Appliance Latches</h4><span class="price">$19</span></div><p>Knob covers, pinch guards, oven and toilet latches where they make sense.</p></div>
+        <div class="svc"><div class="top"><h4>Room-by-Room Safety Audit</h4><span class="price">$79</span></div><p>A full walkthrough at kid height with a written checklist — fee credited toward any work.</p></div>
+      </div>
+    </div>
+    <p class="svc-foot">Pricing includes labor only. Expecting? Book the audit before the crawling starts.</p>
+  </div>
+</section>
+
+<div class="sqsp"><span>SQSP: Services grid = same list-section pattern as Home Maintenance page</span></div>
+
+<section id="videos">
+  <div class="wrap">
+    <span class="eyebrow">Watch &amp; Learn</span>
+    <h2 class="sec-title">Babyproofing, in 60 seconds</h2>
+    <p class="sec-sub"><em>(Placeholder tiles — these become embedded YouTube Shorts.)</em></p>
+    <div class="carousel">
+      <button class="car-btn" type="button" aria-label="Scroll videos back" onclick="this.nextElementSibling.scrollBy({left:-480, behavior:'smooth'})">&#8249;</button>
+      <div class="car-track">
+        <div class="vid"><span class="play" aria-hidden="true"></span><span class="vt">Anchoring a dresser in 10 minutes</span><span class="vd">0:47 · Tip-overs</span></div>
+        <div class="vid"><span class="play" aria-hidden="true"></span><span class="vt">The TV tip-over test every parent should do</span><span class="vd">0:38 · Tip-overs</span></div>
+        <div class="vid"><span class="play" aria-hidden="true"></span><span class="vt">Pressure gates vs. hardware gates at stairs</span><span class="vd">0:52 · Gates</span></div>
+        <div class="vid"><span class="play" aria-hidden="true"></span><span class="vt">Cabinet locks that actually work</span><span class="vd">0:41 · Kitchen</span></div>
+        <div class="vid"><span class="play" aria-hidden="true"></span><span class="vt">Babyproofing checklist: kitchen edition</span><span class="vd">0:56 · Walkthrough</span></div>
+      </div>
+      <button class="car-btn" type="button" aria-label="Scroll videos forward" onclick="this.previousElementSibling.scrollBy({left:480, behavior:'smooth'})">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="news">
+      <div>
+        <h2>Ready to book?</h2>
+        <p>Tell us what your home needs &#8212; we&#8217;ll reply within one business day. Group discounts available.</p>
+      </div>
+      <div style="text-align:center;">
+        <a class="btn btn-orange" href="index.html#book">Request a Service</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="fh">New England Healthy Homes</p>
+        <p>Cleaner. Safer. Healthier Homes.<br>Locally owned and operated in Massachusetts.</p>
+      </div>
+      <div>
+        <p class="fh">Explore</p>
+        <ul>
+          <li><a href="nehh-maintenance.html">Home Maintenance</a></li>
+          <li><a href="nehh-aging.html">Aging in Place</a></li>
+          <li><a href="nehh-childsafety.html">Child Safety</a></li>
+          <li><a href="nehh-homewatch.html">Seasonal Home Watch</a></li>
+          <li><a href="nehh-why.html">Who We Are</a></li>
+          <li><a href="#why">Why It Matters</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="fh">Contact</p>
+        <ul>
+          <li><a href="tel:5165102563">(516) 510-2563</a></li>
+          <li><a href="mailto:NEHealthyHomes@gmail.com">NEHealthyHomes@gmail.com</a></li>
+          <li><a href="https://facebook.com/NewEnglandHealthyHomes">facebook.com/NewEnglandHealthyHomes</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:.78rem; margin-top:36px; opacity:.8;">*The "Did You Know" booking links pre-select the matching service in the request form. This is an optional enhancement: it requires a small custom script via Squarespace code injection (Business plan or higher). Without it, the links simply scroll to the form and the visitor picks the category — no other part of the site depends on custom code.</p>
+    <div class="foot-base">
+      <span>© 2026 New England Healthy Homes · Licensed &amp; Insured</span>
+      <span>Design mockup — not the live site</span>
+    </div>
+  </div>
+</footer>
+<button class="sqsp-toggle" type="button" onclick="document.body.classList.toggle('show-sqsp'); this.textContent = document.body.classList.contains('show-sqsp') ? 'Hide Squarespace notes' : 'Show Squarespace notes';">Show Squarespace notes</button>
+</body>
+</html>
