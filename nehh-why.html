@@ -510,7 +510,7 @@
     </nav>
     <div class="nav-cta">
       <a class="nav-phone" href="tel:6173291535">(617) 329-1535</a>
-      <a class="btn btn-orange" href="index.html#book">Request a Service</a>
+      <a class="btn btn-orange" href="#book">Request a Service</a>
     </div>
   </div>
 </header>
@@ -580,19 +580,52 @@
 
 <div class="sqsp"><span>SQSP: Meet the team = image + text section (native two-column layout)</span></div>
 
-<section>
+<section class="req" id="book">
   <div class="wrap">
-    <div class="news">
+    <span class="eyebrow">Get Started</span>
+    <h2 class="sec-title">Request a service</h2>
+    <div class="req-grid">
       <div>
-        <h2>Ready to book?</h2>
-        <p>Tell us what your home needs &#8212; we&#8217;ll reply within one business day. Group discounts available.</p>
+        <p class="sec-sub">Tell us what your home needs and we&#8217;ll get back to you within one business day with a time that works.</p>
+        <ul class="req-list">
+          <li>Easy scheduling by phone, text, or email</li>
+          <li>Flat-rate labor pricing &#8212; no surprises</li>
+          <li>No high-pressure sales tactics</li>
+          <li>100% satisfaction guarantee</li>
+        </ul>
+        <p class="req-contact">Prefer to talk? Call or text <a href="tel:6173291535">(617) 329-1535</a><br>or email <a href="mailto:Hello@NewEnglandHealthyHomes.com">Hello@NewEnglandHealthyHomes.com</a></p>
       </div>
-      <div style="text-align:center;">
-        <a class="btn btn-orange" href="index.html#book">Request a Service</a>
-      </div>
+      <form class="req-form" onsubmit="event.preventDefault(); alert('This is a mockup &#8212; on the live site this becomes a Squarespace Form Block.');">
+        <div class="req-two">
+          <label>Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+        </div>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>What do you need help with?
+          <select name="service">
+            <option>Home Maintenance</option>
+            <option>Aging in Place</option>
+            <option>Child Safety</option>
+            <option>Seasonal Home Watch</option>
+            <option>Multiple / not sure yet</option>
+          </select>
+        </label>
+        <label>Message
+          <textarea name="message" placeholder="Tell us about your home and what you would like done."></textarea>
+        </label>
+        <button class="btn btn-orange" type="submit">Send Request</button>
+      </form>
     </div>
   </div>
 </section>
+
+<div class="sqsp"><span>SQSP: Same native Form Block as the homepage, dropped into a section on every page; dropdown default set per page</span></div>
 <footer class="site">
   <div class="wrap">
     <div class="foot-grid">
