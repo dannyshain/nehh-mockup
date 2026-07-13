@@ -458,6 +458,29 @@
     border-radius: 999px; padding: 10px 18px; font-size: .82rem; font-weight: 600;
     box-shadow: var(--shadow); cursor: pointer;
   }
+  /* ---------- wide feature card ---------- */
+  .wide-card {
+    background: var(--card); border-radius: 12px; box-shadow: var(--shadow);
+    padding: 34px 36px; margin-top: 36px;
+    display: grid; grid-template-columns: 1.4fr .6fr; gap: 32px; align-items: center;
+  }
+  @media (max-width: 700px) { .wide-card { grid-template-columns: 1fr; } }
+  .wide-card h3 { color: var(--navy); font-size: 1.3rem; }
+  .wide-card p { margin-top: 10px; font-size: .95rem; color: var(--ink-soft); }
+  .wide-card .wc-price { font-size: 2.2rem; font-weight: 800; color: var(--orange); line-height: 1; }
+  .wide-card .wc-side { text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+  .plan-list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: .93rem; color: var(--ink); }
+  .plan-list li::before { content: "✓"; color: var(--pine); font-weight: 700; margin-right: 9px; }
+
+  /* ---------- LAUNCH MODE ----------
+     Hides sections whose assets do not exist yet (photo placeholders,
+     video carousels, newsletter signup) for the stripped-down go-live
+     version. DELETE THIS BLOCK to bring them all back. */
+  .img-ph { display: none; }
+  .intro-grid { display: block; }
+  section#videos { display: none; }
+  section#newsletter { display: none; }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn { transition: none; }
@@ -465,7 +488,7 @@
 </style>
 
 <div class="announce">
-  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(516) 510-2563</strong>
+  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(617) 329-1535</strong>
 </div>
 
 <header class="site">
@@ -488,7 +511,7 @@
       <a href="#reviews">Reviews</a>
     </nav>
     <div class="nav-cta">
-      <a class="nav-phone" href="tel:5165102563">(516) 510-2563</a>
+      <a class="nav-phone" href="tel:6173291535">(617) 329-1535</a>
       <a class="btn btn-orange" href="#book">Request a Service</a>
     </div>
   </div>
@@ -519,7 +542,7 @@
         <div class="vc-row"><span>Water Heater Flush <a class="vc-more" href="nehh-waterheater.html">Learn more →</a></span><span class="price">$99</span></div>
         <div class="vc-row"><span>Bathroom Exhaust Fan Cleaning <a class="vc-more" href="nehh-bathroomfan.html">Learn more →</a></span><span class="price">$49</span></div>
         <div class="vc-row"><span>New Smoke/CO Detector <a class="vc-more" href="nehh-detectors.html">Learn more →</a></span><span class="price">$59<small>/unit</small></span></div>
-        <p class="vc-all"><a href="tel:5165102563">Talk to a technician today — (516) 510-2563</a></p>
+        <p class="vc-all"><a href="tel:6173291535">Talk to a technician today — (617) 329-1535</a></p>
       </aside>
     </div>
   </div>
@@ -573,7 +596,7 @@
       </div>
       <div class="cat" id="childsafety">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4zm0 5a2 2 0 100 4 2 2 0 000-4zm0 5c-2 0-4 1-4 2.5V16h8v-1.5C16 13 14 12 12 12z"/></svg>
-        <h3>Child Safety <span class="placeholder-tag">services &amp; pricing TBD with Dan</span></h3>
+        <h3>Child Safety</h3>
         <p>Baby- and toddler-proofing by someone who knows homes — so you can worry a little less.</p>
         <ul>
           <li>Furniture &amp; TV anchoring</li>
@@ -584,12 +607,12 @@
       </div>
       <div class="cat" id="homewatch">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l9 8h-2v9h-5v-6H10v6H5v-9H3l9-8zm0 5.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/></svg>
-        <h3>Seasonal Home Watch <span class="placeholder-tag">details &amp; pricing TBD with Dan</span></h3>
+        <h3>Seasonal Home Watch</h3>
         <p>Away for the season? Scheduled check-ins keep your empty home safe — and your insurance happy.</p>
         <ul>
-          <li>Weekly or biweekly walk-throughs</li>
-          <li>Leak, heat &amp; storm-damage checks</li>
-          <li>Photo report after every visit</li>
+          <li>Weekly walk-throughs, inside &amp; out</li>
+          <li>Faucets, toilets, fridge &amp; leak checks</li>
+          <li>Photos &amp; emergency response included</li>
         </ul>
         <a class="cat-link" href="nehh-homewatch.html">Explore home watch →</a>
       </div>
@@ -697,7 +720,7 @@
           <li>No contracts or subscriptions, ever</li>
           <li>100% satisfaction guarantee</li>
         </ul>
-        <p class="req-contact">Prefer to talk? Call or text <a href="tel:5165102563">(516) 510-2563</a><br>or email <a href="mailto:NEHealthyHomes@gmail.com">NEHealthyHomes@gmail.com</a></p>
+        <p class="req-contact">Prefer to talk? Call or text <a href="tel:6173291535">(617) 329-1535</a><br>or email <a href="mailto:Hello@NewEnglandHealthyHomes.com">Hello@NewEnglandHealthyHomes.com</a></p>
       </div>
       <form class="req-form" onsubmit="event.preventDefault(); alert('This is a mockup — on the live site this becomes a Squarespace Form Block delivering to Dan\'s email.');">
         <div class="req-two">
@@ -736,14 +759,14 @@
     <div class="news">
       <div>
         <h2>The Healthy Home Checklist</h2>
-        <p>A short seasonal email from Dan: what to check this month, one "did you know," and early access to group-discount days in your neighborhood. No spam, ever.</p>
+        <p>A short seasonal email: what to check this month, one "did you know," and early access to group-discount days in your neighborhood. No spam, ever.</p>
       </div>
       <div>
         <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('This is a mockup — the live site will connect to Squarespace Email Campaigns.');">
           <input type="email" placeholder="you@email.com" aria-label="Email address" required>
           <button class="btn btn-orange" type="submit">Sign Up</button>
         </form>
-        <p class="news-note">Or just call/text (516) 510-2563 — easy scheduling by phone, text, or email.</p>
+        <p class="news-note">Or just call/text (617) 329-1535 — easy scheduling by phone, text, or email.</p>
       </div>
     </div>
   </div>
@@ -773,8 +796,8 @@
       <div>
         <p class="fh">Contact</p>
         <ul>
-          <li><a href="tel:5165102563">(516) 510-2563</a></li>
-          <li><a href="mailto:NEHealthyHomes@gmail.com">NEHealthyHomes@gmail.com</a></li>
+          <li><a href="tel:6173291535">(617) 329-1535</a></li>
+          <li><a href="mailto:Hello@NewEnglandHealthyHomes.com">Hello@NewEnglandHealthyHomes.com</a></li>
           <li><a href="https://facebook.com/NewEnglandHealthyHomes">facebook.com/NewEnglandHealthyHomes</a></li>
         </ul>
       </div>

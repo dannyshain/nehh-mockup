@@ -458,13 +458,36 @@
     border-radius: 999px; padding: 10px 18px; font-size: .82rem; font-weight: 600;
     box-shadow: var(--shadow); cursor: pointer;
   }
+  /* ---------- wide feature card ---------- */
+  .wide-card {
+    background: var(--card); border-radius: 12px; box-shadow: var(--shadow);
+    padding: 34px 36px; margin-top: 36px;
+    display: grid; grid-template-columns: 1.4fr .6fr; gap: 32px; align-items: center;
+  }
+  @media (max-width: 700px) { .wide-card { grid-template-columns: 1fr; } }
+  .wide-card h3 { color: var(--navy); font-size: 1.3rem; }
+  .wide-card p { margin-top: 10px; font-size: .95rem; color: var(--ink-soft); }
+  .wide-card .wc-price { font-size: 2.2rem; font-weight: 800; color: var(--orange); line-height: 1; }
+  .wide-card .wc-side { text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+  .plan-list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: .93rem; color: var(--ink); }
+  .plan-list li::before { content: "✓"; color: var(--pine); font-weight: 700; margin-right: 9px; }
+
+  /* ---------- LAUNCH MODE ----------
+     Hides sections whose assets do not exist yet (photo placeholders,
+     video carousels, newsletter signup) for the stripped-down go-live
+     version. DELETE THIS BLOCK to bring them all back. */
+  .img-ph { display: none; }
+  .intro-grid { display: block; }
+  section#videos { display: none; }
+  section#newsletter { display: none; }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn { transition: none; }
   }
 </style>
 <div class="announce">
-  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(516) 510-2563</strong>
+  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(617) 329-1535</strong>
 </div>
 <header class="site">
   <div class="wrap nav-row">
@@ -486,7 +509,7 @@
       <a href="index.html#reviews">Reviews</a>
     </nav>
     <div class="nav-cta">
-      <a class="nav-phone" href="tel:5165102563">(516) 510-2563</a>
+      <a class="nav-phone" href="tel:6173291535">(617) 329-1535</a>
       <a class="btn btn-orange" href="index.html#book">Request a Service</a>
     </div>
   </div>
@@ -512,22 +535,19 @@
 
 <section id="services">
   <div class="wrap">
-    <span class="eyebrow">Services &amp; Pricing</span>
-    <h2 class="sec-title">Child safety services <span class="placeholder-tag">placeholder services &amp; pricing — for Dan's review</span></h2>
-    <p class="sec-sub">Flat-rate labor, published up front. Materials purchased by you independently, or through NEHH.</p>
-    <div class="svc-group">
-      <div class="svc-grid">
-        <div class="svc"><div class="top"><h4>Furniture &amp; TV Anchoring</h4><span class="price">$19<small>/item</small></span></div><p>Dressers, bookcases, and TVs strapped to studs — the #1 preventable tip-over risk.</p></div>
-        <div class="svc"><div class="top"><h4>Baby Gate Installation</h4><span class="price">$49<small>/gate</small></span></div><p>Hardware-mounted at stairs (not pressure gates), installed into solid framing.</p></div>
-        <div class="svc"><div class="top"><h4>Cabinet &amp; Drawer Locks</h4><span class="price">$29 + $5<small>/lock</small></span></div><p>Kitchen and bath cabinets secured — especially anywhere chemicals or medicines live.</p></div>
-        <div class="svc"><div class="top"><h4>Outlet Protection (Whole Home)</h4><span class="price">$39</span></div><p>Every reachable outlet covered or upgraded to tamper-resistant plates.</p></div>
-        <div class="svc"><div class="top"><h4>Corner &amp; Edge Guards</h4><span class="price">$29<small>/room</small></span></div><p>Coffee tables, hearths, and counters padded where new walkers wobble.</p></div>
-        <div class="svc"><div class="top"><h4>Window &amp; Cord Safety</h4><span class="price">$10<small>/window</small></span></div><p>Window stops and blind-cord fixes — two hazards parents most often miss.</p></div>
-        <div class="svc"><div class="top"><h4>Door &amp; Appliance Latches</h4><span class="price">$19</span></div><p>Knob covers, pinch guards, oven and toilet latches where they make sense.</p></div>
-        <div class="svc"><div class="top"><h4>Room-by-Room Safety Audit</h4><span class="price">$79</span></div><p>A full walkthrough at kid height with a written checklist — fee credited toward any work.</p></div>
+    <span class="eyebrow">Where to Start</span>
+    <h2 class="sec-title">The Room-by-Room Safety Audit</h2>
+    <div class="wide-card">
+      <div>
+        <h3>A full walkthrough of your home — at kid height</h3>
+        <p>We go room by room checking the hazards parents most often miss: tip-over risks, stair gates, cabinets with chemicals or medicines, cords, outlets, and windows. You get a written, prioritized checklist for your home — and the $150 applies as a credit toward any child safety work we do for you.</p>
+      </div>
+      <div class="wc-side">
+        <span class="wc-price">$150</span>
+        <a class="btn btn-orange" href="index.html#book">Book Your Audit</a>
       </div>
     </div>
-    <p class="svc-foot">Pricing includes labor only. Expecting? Book the audit before the crawling starts.</p>
+    <p class="svc-foot">From there, we install exactly what your home needs — anchoring, gates, locks, guards — with a clear quote before any work begins. Expecting? Book the audit before the crawling starts.</p>
   </div>
 </section>
 
@@ -587,8 +607,8 @@
       <div>
         <p class="fh">Contact</p>
         <ul>
-          <li><a href="tel:5165102563">(516) 510-2563</a></li>
-          <li><a href="mailto:NEHealthyHomes@gmail.com">NEHealthyHomes@gmail.com</a></li>
+          <li><a href="tel:6173291535">(617) 329-1535</a></li>
+          <li><a href="mailto:Hello@NewEnglandHealthyHomes.com">Hello@NewEnglandHealthyHomes.com</a></li>
           <li><a href="https://facebook.com/NewEnglandHealthyHomes">facebook.com/NewEnglandHealthyHomes</a></li>
         </ul>
       </div>

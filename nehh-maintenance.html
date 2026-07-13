@@ -458,13 +458,36 @@
     border-radius: 999px; padding: 10px 18px; font-size: .82rem; font-weight: 600;
     box-shadow: var(--shadow); cursor: pointer;
   }
+  /* ---------- wide feature card ---------- */
+  .wide-card {
+    background: var(--card); border-radius: 12px; box-shadow: var(--shadow);
+    padding: 34px 36px; margin-top: 36px;
+    display: grid; grid-template-columns: 1.4fr .6fr; gap: 32px; align-items: center;
+  }
+  @media (max-width: 700px) { .wide-card { grid-template-columns: 1fr; } }
+  .wide-card h3 { color: var(--navy); font-size: 1.3rem; }
+  .wide-card p { margin-top: 10px; font-size: .95rem; color: var(--ink-soft); }
+  .wide-card .wc-price { font-size: 2.2rem; font-weight: 800; color: var(--orange); line-height: 1; }
+  .wide-card .wc-side { text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+  .plan-list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: .93rem; color: var(--ink); }
+  .plan-list li::before { content: "✓"; color: var(--pine); font-weight: 700; margin-right: 9px; }
+
+  /* ---------- LAUNCH MODE ----------
+     Hides sections whose assets do not exist yet (photo placeholders,
+     video carousels, newsletter signup) for the stripped-down go-live
+     version. DELETE THIS BLOCK to bring them all back. */
+  .img-ph { display: none; }
+  .intro-grid { display: block; }
+  section#videos { display: none; }
+  section#newsletter { display: none; }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn { transition: none; }
   }
 </style>
 <div class="announce">
-  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(516) 510-2563</strong>
+  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(617) 329-1535</strong>
 </div>
 <header class="site">
   <div class="wrap nav-row">
@@ -486,7 +509,7 @@
       <a href="index.html#reviews">Reviews</a>
     </nav>
     <div class="nav-cta">
-      <a class="nav-phone" href="tel:5165102563">(516) 510-2563</a>
+      <a class="nav-phone" href="tel:6173291535">(617) 329-1535</a>
       <a class="btn btn-orange" href="index.html#book">Request a Service</a>
     </div>
   </div>
@@ -503,7 +526,7 @@
     <div class="lede-block">
       <p>Your home works hard every day — and its most important maintenance is the kind that's easiest to forget. Nobody sees the lint packing into a dryer vent, the sediment settling in a water heater, or the date stamped on the back of a smoke detector. These little jobs never make it to the top of the list, because nothing looks wrong… until it is.</p>
       <p>The costs of skipping them are real: dryer fires, burst pipes and flooded basements, indoor air your family shouldn't be breathing, and appliances that fail years early — repairs measured in thousands, prevented by services measured in tens.</p>
-      <p>That's the job we've built New England Healthy Homes around. One local, licensed and insured technician who knows your home, flat-rate prices published up front, and a single visit that clears the whole list. No contracts, no upsells — just a healthier home.</p>
+      <p>That's the job we've built New England Healthy Homes around. One local, licensed and insured technician who knows your home, flat-rate prices published up front, and a single visit that clears the whole list. No contracts, no pressure — just a healthier home.</p>
     </div>
     <div class="img-ph">Photo: technician at work — dryer vent or water heater service<br>(to come from Dan)</div>
     </div>
@@ -625,8 +648,8 @@
       <div>
         <p class="fh">Contact</p>
         <ul>
-          <li><a href="tel:5165102563">(516) 510-2563</a></li>
-          <li><a href="mailto:NEHealthyHomes@gmail.com">NEHealthyHomes@gmail.com</a></li>
+          <li><a href="tel:6173291535">(617) 329-1535</a></li>
+          <li><a href="mailto:Hello@NewEnglandHealthyHomes.com">Hello@NewEnglandHealthyHomes.com</a></li>
           <li><a href="https://facebook.com/NewEnglandHealthyHomes">facebook.com/NewEnglandHealthyHomes</a></li>
         </ul>
       </div>

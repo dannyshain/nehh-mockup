@@ -458,13 +458,36 @@
     border-radius: 999px; padding: 10px 18px; font-size: .82rem; font-weight: 600;
     box-shadow: var(--shadow); cursor: pointer;
   }
+  /* ---------- wide feature card ---------- */
+  .wide-card {
+    background: var(--card); border-radius: 12px; box-shadow: var(--shadow);
+    padding: 34px 36px; margin-top: 36px;
+    display: grid; grid-template-columns: 1.4fr .6fr; gap: 32px; align-items: center;
+  }
+  @media (max-width: 700px) { .wide-card { grid-template-columns: 1fr; } }
+  .wide-card h3 { color: var(--navy); font-size: 1.3rem; }
+  .wide-card p { margin-top: 10px; font-size: .95rem; color: var(--ink-soft); }
+  .wide-card .wc-price { font-size: 2.2rem; font-weight: 800; color: var(--orange); line-height: 1; }
+  .wide-card .wc-side { text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+  .plan-list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: .93rem; color: var(--ink); }
+  .plan-list li::before { content: "✓"; color: var(--pine); font-weight: 700; margin-right: 9px; }
+
+  /* ---------- LAUNCH MODE ----------
+     Hides sections whose assets do not exist yet (photo placeholders,
+     video carousels, newsletter signup) for the stripped-down go-live
+     version. DELETE THIS BLOCK to bring them all back. */
+  .img-ph { display: none; }
+  .intro-grid { display: block; }
+  section#videos { display: none; }
+  section#newsletter { display: none; }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn { transition: none; }
   }
 </style>
 <div class="announce">
-  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(516) 510-2563</strong>
+  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(617) 329-1535</strong>
 </div>
 <header class="site">
   <div class="wrap nav-row">
@@ -486,7 +509,7 @@
       <a href="index.html#reviews">Reviews</a>
     </nav>
     <div class="nav-cta">
-      <a class="nav-phone" href="tel:5165102563">(516) 510-2563</a>
+      <a class="nav-phone" href="tel:6173291535">(617) 329-1535</a>
       <a class="btn btn-orange" href="index.html#book">Request a Service</a>
     </div>
   </div>
@@ -512,17 +535,24 @@
 
 <section id="services">
   <div class="wrap">
-    <span class="eyebrow">Services &amp; Pricing</span>
-    <h2 class="sec-title">Home watch services <span class="placeholder-tag">placeholder services &amp; pricing — for Dan's review</span></h2>
-    <p class="sec-sub">Every visit follows a written checklist and ends with a photo report to your phone.</p>
-    <div class="svc-group">
-      <div class="svc-grid">
-        <div class="svc"><div class="top"><h4>Standard Home Watch Visit</h4><span class="price">$49<small>/visit</small></span></div><p>Weekly or biweekly walk-through: water, heat, power, doors and windows, signs of entry or pests.</p></div>
-        <div class="svc"><div class="top"><h4>Storm-Response Check</h4><span class="price">$59</span></div><p>An extra visit after major wind, snow, or freeze events — before small damage becomes big.</p></div>
-        <div class="svc"><div class="top"><h4>Pre-Departure Shutdown</h4><span class="price">$99</span></div><p>Water off, heat set, appliances checked, timers set — your home put properly to sleep.</p></div>
-        <div class="svc"><div class="top"><h4>Pre-Arrival Opening</h4><span class="price">$99</span></div><p>Everything turned back on, checked, and comfortable before you walk in the door.</p></div>
-        <div class="svc"><div class="top"><h4>Contractor &amp; Delivery Access</h4><span class="price">$39<small>/hr</small></span></div><p>We meet the plumber, accept the delivery, and lock up after — so you don't fly home for it.</p></div>
-        <div class="svc"><div class="top"><h4>Custom Watch Plans</h4><span class="price">Upon request</span></div><p>Snowbird season, extended travel, or a family property between visits — built around your calendar.</p></div>
+    <span class="eyebrow">The Plan</span>
+    <h2 class="sec-title">One simple plan: $149/month</h2>
+    <div class="wide-card">
+      <div>
+        <h3>A weekly walk-through, inside and out</h3>
+        <p>Every visit follows a written checklist and ends with photos and documentation sent straight to you. Each walk-through includes — but isn't limited to:</p>
+        <ul class="plan-list">
+          <li>Running all faucets to prevent sediment buildup, and flushing every toilet</li>
+          <li>Checking the fridge and freezer for power outages or food spoilage</li>
+          <li>Checking ceilings for leaks and the whole house for pests</li>
+          <li>A full exterior walk-around for storm damage and anything amiss</li>
+        </ul>
+        <p>If we find an emergency, you get a call right away — and we stay onsite for the emergency repairs. Small issues we spot along the way, we simply take care of.</p>
+      </div>
+      <div class="wc-side">
+        <span class="wc-price">$149<small style="font-size: 1rem; font-weight: 600;">/month</small></span>
+        <span style="font-size: .85rem; color: var(--ink-soft);">One-month minimum</span>
+        <a class="btn btn-orange" href="index.html#book">Set Up Home Watch</a>
       </div>
     </div>
     <p class="svc-foot">Serving Walpole, Wellesley, Canton, Norwood, Sharon, Dedham, Mansfield, Easton, Millis &amp; surrounding areas.</p>
@@ -585,8 +615,8 @@
       <div>
         <p class="fh">Contact</p>
         <ul>
-          <li><a href="tel:5165102563">(516) 510-2563</a></li>
-          <li><a href="mailto:NEHealthyHomes@gmail.com">NEHealthyHomes@gmail.com</a></li>
+          <li><a href="tel:6173291535">(617) 329-1535</a></li>
+          <li><a href="mailto:Hello@NewEnglandHealthyHomes.com">Hello@NewEnglandHealthyHomes.com</a></li>
           <li><a href="https://facebook.com/NewEnglandHealthyHomes">facebook.com/NewEnglandHealthyHomes</a></li>
         </ul>
       </div>
