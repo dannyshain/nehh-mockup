@@ -472,6 +472,21 @@
   .plan-list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: .93rem; color: var(--ink); }
   .plan-list li::before { content: "✓"; color: var(--pine); font-weight: 700; margin-right: 9px; }
 
+  /* ---------- CAPS credential chip ---------- */
+  .caps-chip {
+    display: flex; align-items: center; gap: 16px; margin-top: 22px; max-width: 68ch;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px;
+  }
+  .caps-chip img { height: 56px; width: 56px; border-radius: 50%; background: #fff; flex-shrink: 0; }
+  .caps-chip strong { color: var(--navy); font-size: .95rem; display: block; }
+  .caps-chip span { font-size: .84rem; color: var(--ink-soft); }
+
+  /* ---------- credit pill (wide card) ---------- */
+  .wc-credit {
+    font-size: .8rem; font-weight: 700; color: var(--pine);
+    border: 1.5px solid var(--pine); border-radius: 999px; padding: 7px 14px;
+  }
+
   /* ---------- LAUNCH MODE ----------
      Hides sections whose assets do not exist yet (photo placeholders,
      video carousels, newsletter signup) for the stripped-down go-live
@@ -488,7 +503,7 @@
 </style>
 
 <div class="announce">
-  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(617) 329-1535</strong>
+  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Certified Aging in Place Specialist (CAPS) &nbsp;•&nbsp; Group discounts available
 </div>
 
 <header class="site">
@@ -512,7 +527,7 @@
     </nav>
     <div class="nav-cta">
       <a class="nav-phone" href="tel:6173291535">(617) 329-1535</a>
-      <a class="btn btn-orange" href="#book">Request a Service</a>
+      <a class="btn btn-orange" href="#book">Contact Us</a>
     </div>
   </div>
 </header>
@@ -526,7 +541,7 @@
         <h1>Cleaner. Safer.<br><span class="accent">Healthier homes.</span></h1>
         <p class="lede">Home maintenance, aging-in-place updates, childproofing, and seasonal home watch — the jobs that keep your home healthy, done right by a friendly local team at honest flat-rate prices.</p>
         <div class="hero-ctas">
-          <a class="btn btn-orange" href="#book">Request a Service</a>
+          <a class="btn btn-orange" href="#book">Contact Us</a>
           <a class="btn btn-ghost" href="#categories">Explore Our Services</a>
         </div>
         <div class="hero-checks">
@@ -562,6 +577,7 @@
     <div class="trust-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M4 3h12v2H4V3zm0 4h12v10H4V7zm3 3v4h6v-4H7z"/></svg> Honest, Upfront Pricing</div>
     <div class="trust-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1a9 9 0 100 18 9 9 0 000-18zm-1 13.4L4.6 10 6 8.6l3 3 5-5L15.4 8 9 14.4z"/></svg> 100% Satisfaction Guarantee</div>
     <div class="trust-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M3 10a7 7 0 1114 0 7 7 0 01-14 0zm7-5v5l4 2-.8 1.5L9 11V5h1z"/></svg> No High-Pressure Sales</div>
+    <div class="trust-item"><img src="caps-badge.png" alt="CAPS seal" style="height: 26px; width: 26px; border-radius: 50%;"> Certified Aging in Place Specialist</div>
   </div>
 </div>
 
@@ -710,7 +726,7 @@
 <section class="req" id="book">
   <div class="wrap">
     <span class="eyebrow">Get Started</span>
-    <h2 class="sec-title">Request a service</h2>
+    <h2 class="sec-title">Contact us</h2>
     <div class="req-grid">
       <div>
         <p class="sec-sub">Tell us what your home needs and we'll get back to you within one business day with a time that works.</p>

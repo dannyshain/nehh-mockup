@@ -472,6 +472,21 @@
   .plan-list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: .93rem; color: var(--ink); }
   .plan-list li::before { content: "✓"; color: var(--pine); font-weight: 700; margin-right: 9px; }
 
+  /* ---------- CAPS credential chip ---------- */
+  .caps-chip {
+    display: flex; align-items: center; gap: 16px; margin-top: 22px; max-width: 68ch;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px;
+  }
+  .caps-chip img { height: 56px; width: 56px; border-radius: 50%; background: #fff; flex-shrink: 0; }
+  .caps-chip strong { color: var(--navy); font-size: .95rem; display: block; }
+  .caps-chip span { font-size: .84rem; color: var(--ink-soft); }
+
+  /* ---------- credit pill (wide card) ---------- */
+  .wc-credit {
+    font-size: .8rem; font-weight: 700; color: var(--pine);
+    border: 1.5px solid var(--pine); border-radius: 999px; padding: 7px 14px;
+  }
+
   /* ---------- LAUNCH MODE ----------
      Hides sections whose assets do not exist yet (photo placeholders,
      video carousels, newsletter signup) for the stripped-down go-live
@@ -487,7 +502,7 @@
   }
 </style>
 <div class="announce">
-  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Group discounts available &nbsp;•&nbsp; <strong>(617) 329-1535</strong>
+  <strong>Licensed &amp; Insured</strong> &nbsp;•&nbsp; Certified Aging in Place Specialist (CAPS) &nbsp;•&nbsp; Group discounts available
 </div>
 <header class="site">
   <div class="wrap nav-row">
@@ -510,7 +525,7 @@
     </nav>
     <div class="nav-cta">
       <a class="nav-phone" href="tel:6173291535">(617) 329-1535</a>
-      <a class="btn btn-orange" href="#book">Request a Service</a>
+      <a class="btn btn-orange" href="#book">Contact Us</a>
     </div>
   </div>
 </header>
@@ -583,7 +598,7 @@
 <section class="req" id="book">
   <div class="wrap">
     <span class="eyebrow">Get Started</span>
-    <h2 class="sec-title">Request a service</h2>
+    <h2 class="sec-title">Contact us</h2>
     <div class="req-grid">
       <div>
         <p class="sec-sub">Tell us what your home needs and we&#8217;ll get back to you within one business day with a time that works.</p>
